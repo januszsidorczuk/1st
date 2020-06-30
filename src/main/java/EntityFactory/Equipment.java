@@ -1,10 +1,11 @@
 package EntityFactory;
+
 import org.hibernate.annotations.GenericGenerator;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
 @Entity
 @Table( name = "equipment" )
 public class Equipment {
@@ -15,10 +16,9 @@ public class Equipment {
     private String isWorking;
 
     @Id
-    @GeneratedValue(generator = "increment")
-    @GenericGenerator(name = "increment", strategy = "increment")
-    private Long id;
-    public Long getId() {
+    @GeneratedValue
+    private Integer id;
+    public Integer getId() {
         return id;
     }
 
